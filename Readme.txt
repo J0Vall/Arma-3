@@ -1,1 +1,1 @@
-Wiki & Files licensed by LordRaspy & VallTeK
+Wiki licensed by LordRaspy & VallTeK
