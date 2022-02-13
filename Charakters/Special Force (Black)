@@ -1,0 +1,53 @@
+comment "Exported from Arsenal by LordRaspy";
+
+comment "[!] UNIT MUST BE LOCAL [!]";
+if (!local this) exitWith {};
+
+comment "Remove existing items";
+removeAllWeapons this;
+removeAllItems this;
+removeAllAssignedItems this;
+removeUniform this;
+removeVest this;
+removeBackpack this;
+removeHeadgear this;
+removeGoggles this;
+
+comment "Add weapons";
+this addWeapon "arifle_ARX_blk_F";
+this addPrimaryWeaponItem "muzzle_snds_H";
+this addPrimaryWeaponItem "acc_flashlight";
+this addPrimaryWeaponItem "optic_Hamr";
+this addPrimaryWeaponItem "30Rnd_65x39_caseless_green";
+this addPrimaryWeaponItem "bipod_01_F_blk";
+this addWeapon "hgun_P07_blk_F";
+this addHandgunItem "muzzle_snds_L";
+this addHandgunItem "16Rnd_9x21_Mag";
+
+comment "Add containers";
+this forceAddUniform "U_O_R_Gorka_01_black_F";
+this addVest "V_PlateCarrierSpec_blk";
+this addBackpack "B_ViperHarness_blk_F";
+
+comment "Add binoculars";
+this addWeapon "Rangefinder";
+
+comment "Add items to containers";
+for "_i" from 1 to 5 do {this addItemToUniform "16Rnd_9x21_red_Mag";};
+for "_i" from 1 to 10 do {this addItemToVest "30Rnd_65x39_caseless_green_mag_Tracer";};
+for "_i" from 1 to 5 do {this addItemToBackpack "FirstAidKit";};
+for "_i" from 1 to 5 do {this addItemToBackpack "DemoCharge_Remote_Mag";};
+for "_i" from 1 to 10 do {this addItemToBackpack "SmokeShell";};
+this addHeadgear "H_CrewHelmetHeli_B";
+this addGoggles "G_Bandanna_aviator";
+
+comment "Add items";
+this linkItem "ItemMap";
+this linkItem "ItemCompass";
+this linkItem "ItemWatch";
+this linkItem "ItemRadio";
+this linkItem "ItemGPS";
+this linkItem "O_NVGoggles_grn_F";
+
+comment "Set identity";
+[this,"Barklem","male10eng"] call BIS_fnc_setIdentity;
